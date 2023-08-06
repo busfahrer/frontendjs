@@ -1,5 +1,4 @@
-
-function h(tag, attrs, content) {
+h = (tag, attrs, content) => {
   const el = document.createElement(tag);
 
   for (attr in attrs) {
