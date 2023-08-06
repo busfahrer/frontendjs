@@ -10,6 +10,8 @@ function h(tag, attrs, content) {
     el.textContent = content;
   } else if (content instanceof HTMLElement) {
     el.append(content);
+  } else if (Array.isArray(content)) {
+    content.forEach(item => el.append(item));
   }
 
   return el;

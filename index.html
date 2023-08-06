@@ -13,7 +13,12 @@
     console.log("inline");
     const root = document.getElementById("root");
     root.innerHTML = '';
-    root.append(h("b", null, "bbb"));
+    root.append(
+      h("b", null,
+        [
+          "foo",
+          h("span", null, "inner2"),
+        ]));
   </script>
 </body>
 </html>
