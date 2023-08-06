@@ -1,10 +1,9 @@
 
 function h(tag, attrs, content) {
+
   const el = document.createElement(tag);
 
-  for (attr in attrs) {
-    el[attr] = attrs[attr]
-  }
+  Object.assign(el, attrs)
 
   if (typeof content === "string") {
     el.textContent = content;

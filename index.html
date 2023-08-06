@@ -15,7 +15,9 @@
     root.innerHTML = '';
     root.append(h("a", { href: "http://ix.de:" }, "ix.de"));
     root.append(h("hr"));
-    root.append(h("b", null, h("i", null, "inner")));
+    const b = h("b", { style: { color: "red" } }, h("i", null, "inner"))
+    // b.style.color = "red";
+    root.append(b);
     root.append(h("hr"));
     root.append(h("b", null, [
         h("i", null, "inner2"),
