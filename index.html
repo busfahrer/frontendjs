@@ -26,6 +26,12 @@
 
     root.append(h("button", { onmouseover: () => console.log("HOVER") }, "hover me"));
     root.append(h("span", { style: { color: "green"} }, "green text"));
+
+    root.append(h("hr"));
+    root.append(h("b", "shortcut bold"));
+    root.append(h("b", h("i", "shortcut italic nested")));
+    root.append(h("span", [ h("i", "shortcut italic array"), h("b", "and bold") ]));
+
   </script>
 </body>
 </html>

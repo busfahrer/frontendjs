@@ -1,7 +1,14 @@
 
-function h(tag, attrs, content) {
+function h(tag, rawAttrs, rawContent) {
+  let isEl = x => x instanceof HTMLElement;
+  let isStr = x => typeof x == "string";
+  let isArr = Array.isArray;
 
-  const el = document.createElement(tag);
+  let useShortcut = isEl(rawAttrs) || isStr(rawAttrs) || isArr(rawAttrs);
+  let attrs = useShortcut ? {} : rawAttrs;
+  let content = useShortcut ? rawAttrs : rawContent;
+
+  let el = document.createElement(tag);
 
   Object.assign(el, attrs);
 
@@ -9,11 +16,11 @@ function h(tag, attrs, content) {
     Object.assign(el.style, attrs.style);
   }
 
-  if (typeof content === "string") {
+  if (isStr(content)) {
     el.textContent = content;
-  } else if (content instanceof HTMLElement) {
+  } else if (isEl(content)) {
     el.append(content);
-  } else if (Array.isArray(content)) {
+  } else if (isArr(content)) {
     content.forEach(item => el.append(item));
   }
 

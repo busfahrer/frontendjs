@@ -33,9 +33,10 @@ h("div", null, [
 ]);
 ```
 
-## Copy and paste version
+## Copy and paste version (300 bytes)
 ```js
-function h(e,t,n){const s=document.createElement(e);return Object.assign(s,t),t&&t.style&&
-  Object.assign(s.style,t.style),"string"==typeof n?s.textContent=n:n instanceof HTMLElement
-  ?s.append(n):Array.isArray(n)&&n.forEach((e=>s.append(e))),s}
+function h(e,t,n){let s=e=>e instanceof HTMLElement,a=e=>"string"==typeof e,r=Array.isArray,
+  c=s(t)||a(t)||r(t),i=c?{}:t,l=c?t:n,o=document.createElement(e);return Object.assign(o,i),
+  i&&i.style&&Object.assign(o.style,i.style),a(l)?o.textContent=l:s(l)?o.append(l):r(l)
+  &&l.forEach((e=>o.append(e))),o}
 ```
