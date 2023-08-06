@@ -2,8 +2,8 @@
 function h(tag, attrs, content) {
   const el = document.createElement(tag);
 
-  if (attrs) {
-    Object.keys(attrs).forEach(key => el[key] = attrs[key]);
+  for (attr in attrs) {
+    el[attr] = attrs[attr]
   }
 
   if (typeof content === "string") {
@@ -16,4 +16,3 @@ function h(tag, attrs, content) {
 
   return el;
 }
-
