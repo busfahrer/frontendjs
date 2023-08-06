@@ -4,7 +4,7 @@
 > Nanoscopic frontend helper function
 
 ## Usage
-- Optional: Minify by running `yarn build`
+- Optional: Minify by running `yarn build` or using https://minify-js.com/
 - Include `frontend.min.js`
 - use `h()` instead of `document.createElement()`
 
@@ -31,4 +31,11 @@ h("div", null, [
   h("b", null, "bold content"),
   "simple text content",
 ]);
+```
+
+## Copy and paste version
+```js
+function h(e,t,n){const s=document.createElement(e);return Object.assign(s,t),t&&t.style&&
+  Object.assign(s.style,t.style),"string"==typeof n?s.textContent=n:n instanceof HTMLElement
+  ?s.append(n):Array.isArray(n)&&n.forEach((e=>s.append(e))),s}
 ```
