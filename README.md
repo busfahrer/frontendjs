@@ -7,6 +7,7 @@
 - Optional: Minify by running `yarn build` or using https://minify-js.com/
 - Include `frontend.min.js`
 - use `h()` instead of `document.createElement()`
+- Alternatively, just use the copy & paste version at the end of this document
 
 ## Usage Examples
 ```js
