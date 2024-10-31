@@ -22,7 +22,7 @@ h("a", { href: "http://google.com" }, "google.com");
 h("button", { onclick: () => console.log("click") }, "click me");
 
 // Use the special "style" property to set CSS:
-h("span", { style: { color: "green"} }, "green text");
+h("span", { style: { "font-family": "sans-serif"} }, "styled text");
 
 // Nested usage
 h("span", null,
@@ -37,7 +37,6 @@ h("div", null, [
 
 ## Copy and paste version
 ```js
-function h(e,t,n){const s=document.createElement(e);return Object.assign(s,t),
-  t?.style&&Object.assign(s.style,t.style),"object"!=typeof n?s.textContent=n:
-  Array.isArray(n)?s.append(...n):s.append(n),s}
+function h(e,t,n){const s=document.createElement(e);return Object.assign(s,t),t?.style&&Object.assign
+  (s.style,t.style),"object"!=typeof n?s.textContent=n:Array.isArray(n)?s.append(...n):s.append(n),s}
 ```
