@@ -11,10 +11,8 @@ function h(tag, attrs, content) {
 
   if (typeof content !== "object") {
     el.textContent = content;
-  } else if (content instanceof HTMLElement) {
-    el.append(content);
-  } else if (Array.isArray(content)) {
-    el.append(...content);
+  } else {
+    Array.isArray(content) ? el.append(...content) : el.append(content);
   }
 
   return el;
