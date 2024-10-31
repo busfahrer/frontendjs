@@ -5,7 +5,7 @@ function h(tag, attrs, content) {
 
   Object.assign(el, attrs);
 
-  if (attrs && attrs.style) {
+  if (attrs?.style) {
     Object.assign(el.style, attrs.style);
   }
 
@@ -15,6 +15,7 @@ function h(tag, attrs, content) {
     el.append(content);
   } else if (Array.isArray(content)) {
     content.forEach(item => el.append(item));
+    //el.append(...content);
   }
 
   return el;
