@@ -5,27 +5,24 @@
   <script src="./frontend.js" type="text/javascript"></script>
 </head>
 <body>
-  This is Foo
-
   <div id="root"></div>
 
   <script>
-    console.log("inline");
     const root = document.getElementById("root");
     root.innerHTML = '';
-    root.append(h("a", { href: "http://ix.de:" }, "ix.de"));
+    root.append(h("a", { href: "https://ix.de:" }, "ix.de"));
     root.append(h("hr"));
     const b = h("b", { style: { "font-family": "sans-serif" } }, h("i", null, "sans-serif italic"))
     root.append(b);
     root.append(h("hr"));
     root.append(h("b", null, [
-        h("i", null, "inner2"),
-        "just text",
+        h("i", null, "bold+italic "),
+        "just bold ",
         1337,
       ]));
-
+    root.append(h("hr"));
     root.append(h("button", { onclick: e => e.target.innerText = "thanks!" }, "click me"));
-    root.append(h("span", { style: { color: "green"} }, "green text"));
+    root.append(h("span", { style: { color: "green"} }, " green text "));
     root.append(h("span", null, 1337));
   </script>
 </body>
