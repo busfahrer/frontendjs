@@ -14,8 +14,7 @@ function h(tag, attrs, content) {
   } else if (content instanceof HTMLElement) {
     el.append(content);
   } else if (Array.isArray(content)) {
-    content.forEach(item => el.append(item));
-    //el.append(...content);
+    el.append(...content);
   }
 
   return el;
