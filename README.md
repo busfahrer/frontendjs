@@ -6,7 +6,7 @@
 Implements the tiny `h()` function which allows you to save a lot of calls to document.createElement() and the subsequent property changes.
 
 ## Usage
-- Just use the copy & paste version at the end of this document
+- 🚨 ***Just use the [copy & paste version](#copy-and-paste-version) at the end of this document*** 🚨
 - Alternatively:
     - Minify by running `yarn build` or using https://minify-js.com/
     - Include `frontend.min.js`
