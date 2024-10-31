@@ -3,7 +3,7 @@
 
 > Nanoscopic frontend helper function
 
-Implements the tiny `h()` function which allows you to save a lot of calls to document.createElement() and the subsequent property changes.
+Implements the tiny `h()` function which allows you to save a lot of calls to `document.createElement()` and the subsequent property changes.
 
 ## Usage
 - 🚨 ***Just use the [copy & paste version](#copy-and-paste-version) at the end of this document*** 🚨
