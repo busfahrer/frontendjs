@@ -9,7 +9,7 @@ function h(tag, attrs, content) {
     Object.assign(el.style, attrs.style);
   }
 
-  if (typeof content === "string") {
+  if (typeof content !== "object") {
     el.textContent = content;
   } else if (content instanceof HTMLElement) {
     el.append(content);

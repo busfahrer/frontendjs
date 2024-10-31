@@ -6,9 +6,9 @@
 </head>
 <body>
   This is Foo
-  
+
   <div id="root"></div>
-  
+
   <script>
     console.log("inline");
     const root = document.getElementById("root");
@@ -22,10 +22,12 @@
     root.append(h("b", null, [
         h("i", null, "inner2"),
         "just text",
+        1337,
       ]));
 
     root.append(h("button", { onmouseover: () => console.log("HOVER") }, "hover me"));
     root.append(h("span", { style: { color: "green"} }, "green text"));
+    root.append(h("span", null, 1337));
   </script>
 </body>
 </html>
