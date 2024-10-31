@@ -15,8 +15,7 @@
     root.innerHTML = '';
     root.append(h("a", { href: "http://ix.de:" }, "ix.de"));
     root.append(h("hr"));
-    const b = h("b", { style: { color: "red" } }, h("i", null, "inner"))
-    // b.style.color = "red";
+    const b = h("b", { style: { "font-family": "sans-serif" } }, h("i", null, "sans-serif italic"))
     root.append(b);
     root.append(h("hr"));
     root.append(h("b", null, [

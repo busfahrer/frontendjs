@@ -4,10 +4,11 @@
 > Nanoscopic frontend helper function
 
 ## Usage
-- Optional: Minify by running `yarn build` or using https://minify-js.com/
-- Include `frontend.min.js`
-- use `h()` instead of `document.createElement()`
-- Alternatively, just use the copy & paste version at the end of this document
+- Just use the copy & paste version at the end of this document
+- Alternatively:
+    - Minify by running `yarn build` or using https://minify-js.com/
+    - Include `frontend.min.js`
+    - use `h()` instead of `document.createElement()`
 
 ## Usage Examples
 ```js
@@ -20,7 +21,7 @@ h("a", { href: "http://google.com" }, "google.com");
 // Event handlers are just attributes
 h("button", { onclick: () => console.log("click") }, "click me");
 
-// Use the `style` property to set CSS:
+// Use the special "style" property to set CSS:
 h("span", { style: { color: "green"} }, "green text");
 
 // Nested usage
