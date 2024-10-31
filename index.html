@@ -25,7 +25,7 @@
         1337,
       ]));
 
-    root.append(h("button", { onmouseover: () => console.log("HOVER") }, "hover me"));
+    root.append(h("button", { onclick: e => e.target.innerText = "thanks!" }, "click me"));
     root.append(h("span", { style: { color: "green"} }, "green text"));
     root.append(h("span", null, 1337));
   </script>
